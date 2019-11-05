@@ -1,2 +1,4 @@
 # caesar_cypher
-Fun tool for learning about the Caesar Cypher.
+
+![alt text](https://raw.githubusercontent.com/cldixon/caesar_cypher/src/julius_image.svg))
+
