@@ -24,5 +24,5 @@ python caesar.py -cypher -shift 5 -message "veni, vidi, vici"
 
 ```
 # decypher message
-python caesar.py -decypher -shift 5 -message "alkjdfk kaj ieur"
+python caesar.py -decypher -shift 9 -message "ngyarnwln rb cqn cnjlqna xo juu cqrwpb"
 ```
