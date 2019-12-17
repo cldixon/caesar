@@ -16,22 +16,22 @@ class Caesar:
 		letter_idx.update(idx_letter)
 		return letter_idx
 
-	def _shift(self, letter, value):
+	def _shift(self, letter: str, value: int):
 		'''Provide letter and shift values
 		as input. Outputs shifted letter.'''
 		letter_idx = self.letter_index[letter]
 		add_shift = (letter_idx + value) % 26
 		return self.letter_index[add_shift]
 
-	def _tokenize_message(self, message):
+	def _tokenize_message(self, message: str):
 		'''Basic preparation of input message.'''
 		return list(message)
 
-	def _lowercase_tokens(self, tokens):
+	def _lowercase_tokens(self, tokens: list):
 		'''Lowercases all tokens in tokenized message.'''
 		return [t.lower() for t in tokens]
 
-	def cypher(self, message, shift, keep_caps=False):
+	def cypher(self, message: str, shift: int, keep_caps: bool = False):
 		'''Encrypts input message.'''
 		tokenized = self._tokenize_message(message)
 		processed = self._lowercase_tokens(tokenized)
@@ -42,6 +42,6 @@ class Caesar:
 			encrypted = [l.upper() if i in caps_idx else l for i,l in enumerate(encrypted)]
 		return ''.join(encrypted)
 
-	def decypher(self, message, shift, keep_caps=False):
+	def decypher(self, message: str, shift: int, keep_caps: bool = False):
 		'''Decrypts input message.'''
 		return self.cypher(message, -shift, keep_caps=keep_caps)
